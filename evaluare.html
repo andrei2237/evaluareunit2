@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="evaluare.css">
+</head>
+<body>
+
+<h1>Bichis Andrei-Nicolae</h1>
+<p id="contact">bichis.ni.andrei@student.utcluj.ro</p>
+
+<h2>
+    <p id="struct">Structura retelei personale si accesul la internet</p>
+    <img src="Structura retelei.png">
+    <p id="caract">Caracteristicile conexiunii la retea</p>
+    <ul>
+        <li>Adresa MAC: 2C-F0-5D-8A-5D-7F</li>
+        <li>Adresa IP: 192.168.1.109</li>
+        <li>Debit la download: 862 Mbps</li>
+        <li>Debit la upload: 366 Mbps</li>
+    </ul>
+</h2>
+
+<h3>Specificatii tehnice ale statiei principale de lucru</h3>
+
+<table>
+    <tr>
+      <th>Denumire componenta</th>
+      <th>Producator</th>
+      <th>Parametri</th>
+    </tr>
+    <tr>
+      <td>i5-10400F</td>
+      <td>Intel</td>
+      <td>6 Cores, 4.30 GHz</td>
+    </tr>
+    <tr>
+      <td>B460M-A PRO</td>
+      <td>MSI</td>
+      <td>LGA 1200, Gen3</td>
+    </tr>
+    <tr>
+      <td>Aegis DDR4 16GB</td>
+      <td>G.Skill</td>
+      <td>3200 MHz, CL16, 1.35V</td>
+    </tr>
+    <tr>
+      <td>GTX 1650 Super OC Edition</td>
+      <td>ASUS ROG Strix</td>
+      <td>4GB, GDDR6, 128 bit</td>
+    </tr>
+    <tr>
+      <td>CX650</td>
+      <td>Corsair</td>
+      <td>80+ Bronze, 650W</td>
+    </tr>
+    <tr>
+      <td>MX500</td>
+      <td>Crucial</td>
+      <td>500GB, Sata3, 2.5"</td>
+    </tr>
+    <tr>
+      <td>Armis AR1</td>
+      <td>SilentiumPC</td>
+      <td>Middle Tower</td>
+    </tr>
+</table>
+
+<h4>Utilizarea resurselor (slideshow)</h3>
+
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <img src="resurse1.PNG" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="resurse2.PNG" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="resurse3.PNG" style="width:100%">
+    </div>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+    
+    <script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 3000);
+    }
+    </script>
+  
+</body>
+</html>
